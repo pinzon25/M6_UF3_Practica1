@@ -20,11 +20,21 @@ PRIMARY KEY(id_joc),
 FOREIGN KEY(id_plataforma) REFERENCES Consola(id_consola)
 );
 
+
+
+INSERT INTO Consola VALUES (null, "Playstation", "playstation.png");
+INSERT INTO Consola VALUES (null, "Super Nintendo", "snes.png");
+INSERT INTO Consola VALUES (null, "Sega Dreamcast", "dreamcast.png");
+INSERT INTO Consola VALUES (null, "Sega Megadrive", "megadrive.png");
+
+INSERT INTO Joc VALUES(null, 1,"Legacy of Kain: Soul reaver","Aventura d'accio on portarem a terme la venjança d'en Raziel.", "soul_reaver.jpg");
+INSERT INTO Joc VALUES(null, 1,"Metal Gear Solid","Aventura d'espionatge on ens posarem a la pell del millor espia.", "mgs.jpg");
+INSERT INTO Joc VALUES(null, 1,"Crash Bandicoot","Joc de plataformes on haurem de superar nivells mentre controlem a un marsupial.", "crash_bandicoot.jpg");
+INSERT INTO Joc VALUES(null, 2,"Super Mario World","Joc de plataformes de super nintendo del conegut Mario Bros.", "supermariosnes.jpg");
+INSERT INTO Joc VALUES(null, 4,"Mortal Kombat 3","Joc de lluita basat en el torneig entre el Mon exterior i el regne de la Terra.", "mortalkombat3.jpg");
+
+
+
+
 select * from Consola;
-
-INSERT INTO Consola VALUES (null, "Playstation", "logo");
-
-INSERT INTO Joc VALUES(null, 1,"Legacy of Kain: Soul reaver","Aventura d'accio on portarem a terme la venjança d'en Raziel.", "..\..\..\..\images\soul_reaver.jpg");
-
-
 select * from Joc;

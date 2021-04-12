@@ -25,7 +25,7 @@ class JocsController : Controller() {
         //c.close()
     }
 
-    fun carregaJocs(id:Int): MutableList<Joc> {
+    fun carregaJocs(): MutableList<Joc> {
         var llistatJocs: MutableList<Joc> = ArrayList()
         var j: Joc? = null
         val ps = c.createStatement().executeQuery("SELECT * FROM Joc")
@@ -38,13 +38,35 @@ class JocsController : Controller() {
 
             j = Joc(id, plataforma, nom, descripcio, portada)
 
-            if (id.equals(j.id_joc)) {
-                llistatJocs.add(j)
-            }
+            llistatJocs.add(j)
+
         }
-        return llistatJocs //Retornem el arraylist amb tots els jocs que corresponen a aquella consola.
+        return llistatJocs //Retornem els jocs segons Consola.
         //c.close()
     }
+
+    fun carregaJocsPerPlataforma(idCons:Int?): MutableList<Joc> {
+        var llistatJocsPlataforma: MutableList<Joc> = ArrayList()
+        var j: Joc? = null
+        val ps = c.createStatement().executeQuery("SELECT * FROM Joc")
+        while (ps.next()) {
+            val id = ps.getInt("id_joc")
+            val plataforma = ps.getInt("id_plataforma")
+            val nom = ps.getString("nom")
+            val descripcio = ps.getString("descripcio")
+            val portada = ps.getString("portada")
+
+            j = Joc(id, plataforma, nom, descripcio, portada)
+
+            if (idCons?.equals(j.id_plataforma) == true) {
+                llistatJocsPlataforma.add(j)
+            }
+        }
+        return llistatJocsPlataforma //Retornem els jocs segons Consola.
+    //c.close()
+    }
+
+
 
     //fun
 }
