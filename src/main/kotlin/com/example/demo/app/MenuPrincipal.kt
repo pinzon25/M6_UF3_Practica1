@@ -64,8 +64,6 @@ class MenuPrincipal: View(){
                     println("Llistat de jocs obtinguts amb el id de la consola: "+j)
                     J = tableview(j) { //column("Id", Alumne::idProperty)
                         column("Nom", Joc::nomProperty).minWidth(240.0).isResizable
-                        //column("", Joc::descripcioProperty)
-
                         prefHeight = 401.0
                         prefWidth = 240.0
                         layoutX = 120.0
