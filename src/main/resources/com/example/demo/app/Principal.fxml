@@ -8,7 +8,6 @@
 
 <AnchorPane prefHeight="624.0" prefWidth="911.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="Im_logo" fitHeight="150.0" fitWidth="200.0" layoutX="716.0" pickOnBounds="true" preserveRatio="true" />
       <Rectangle fx:id="Rc_Background" arcHeight="5.0" arcWidth="5.0" height="624.0" stroke="BLACK" strokeType="INSIDE" width="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <fill>
             <LinearGradient endX="1.0" endY="1.0" startY="0.7761904761904762">
@@ -25,12 +24,16 @@
                   </Stop>
                   <Stop offset="1.0">
                      <color>
-                        <Color red="0.017543859779834747" green="0.8853800892829895" blue="0.9473684430122375" />
+                        <Color red="0.01568627543747425" green="0.886274516582489" blue="0.9490196108818054" />
                      </color>
                   </Stop>
                </stops>
             </LinearGradient>
          </fill></Rectangle>
+      <ImageView fx:id="Im_logo" fitHeight="150.0" fitWidth="200.0" layoutX="716.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../logo_gestioalumnes_edit.png" />
+         </image></ImageView>
    </children>
    <effect>
       <Blend />

@@ -3,8 +3,8 @@ import java.sql.Connection
 import java.sql.DriverManager
 
 class Connexio{
-    //var db = DriverManager.getConnection("jdbc:mysql://localhost:3306/Practica2uf2m6?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","administrador1","admin1")
-    var db = DriverManager.getConnection("jdbc:mysql://localhost:3306/videojocs?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","administrador1","admin1")
+    var db = DriverManager.getConnection("jdbc:mysql://localhost:3306/Practica2uf2m6?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","administrador1","admin1")
+    //var db = DriverManager.getConnection("jdbc:mysql://localhost:3306/videojocs?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC","administrador1","admin1")
 
     fun connexio():Connection{
 
